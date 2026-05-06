@@ -2,7 +2,7 @@
 
 A React + Vite demo app that consumes public FreeAPI endpoints and demonstrates multiple pagination styles, reusable UI components, and polished page layouts.
 
-[Preview Link](https://free-api-assignments-ritank.vercel.app/)
+[Live Link](https://free-api-assignments-ritank.vercel.app/)
 
 ## Overview
 
