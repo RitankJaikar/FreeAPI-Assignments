@@ -2,6 +2,8 @@
 
 A React + Vite demo app that consumes public FreeAPI endpoints and demonstrates multiple pagination styles, reusable UI components, and polished page layouts.
 
+[Preview Link](https://free-api-assignments-ritank.vercel.app/)
+
 ## Overview
 
 This project is a collection of small API assignment pages built with React, Vite, Tailwind-compatible styling, and reusable components. Each page demonstrates a different pagination or loading pattern while preserving previous data and offering a consistent card-based UI.
