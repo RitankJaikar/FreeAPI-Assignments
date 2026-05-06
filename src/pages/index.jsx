@@ -1,0 +1,8 @@
+export { default as Home } from "./Home";
+export { default as CatsPage } from "./Cats/CatsPage";
+export { default as QuotesPage } from "./Quotes/QuotesPage";
+export { default as JokesPage } from "./Jokes/JokesPage";
+export { default as UsersPage } from "./Users/UsersPage";
+export { default as MealsPage } from "./Meals/MealsPage";
+export { default as ProductsPage } from "./Products/ProductsPage";
+export { default as YouTubePage } from "./YouTube/YouTubePage";
