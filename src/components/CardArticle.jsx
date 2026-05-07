@@ -40,9 +40,9 @@ export const CardArticle = ({
 
         {description && (
           <div className="space-y-1">
-            <p className="text-xs font-semibold uppercase tracking-wider text-slate-400">
+            <strong className="text-sm font-semibold tracking-wider text-slate-400">
               Description
-            </p>
+            </strong>
             <p className="line-clamp-5 whitespace-pre-line text-sm leading-6 text-slate-200">
               {description}
             </p>
