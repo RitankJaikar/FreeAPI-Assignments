@@ -5,21 +5,24 @@ export const PaginationTimed = ({ data, onNextPage, loading }) => {
   const [timeRemaining, setTimeRemaining] = useState(5);
   const [isActive, setIsActive] = useState(true);
 
+  // 1. Timer Logic: Sirf countdown handle karega
   useEffect(() => {
     if (!isActive || !data?.data?.nextPage || loading) return;
 
     const timer = setInterval(() => {
-      setTimeRemaining((prev) => {
-        if (prev <= 1) {
-          onNextPage();
-          return 5;
-        }
-        return prev - 1;
-      });
+      setTimeRemaining((prev) => (prev > 0 ? prev - 1 : 0));
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [isActive, data?.data?.nextPage, loading, onNextPage]);
+  }, [isActive, data?.data?.nextPage, loading]);
+
+  // 2. Action Logic: Jab time 0 ho jaye, tab page change karega
+  useEffect(() => {
+    if (timeRemaining === 0) {
+      onNextPage();
+      setTimeRemaining(5); // Reset timer
+    }
+  }, [timeRemaining, onNextPage]);
 
   const handleSkip = () => {
     if (data?.data?.nextPage && !loading) {
@@ -41,7 +44,7 @@ export const PaginationTimed = ({ data, onNextPage, loading }) => {
         </p>
         <div className="h-3 overflow-hidden rounded-full border border-zinc-800 bg-zinc-900">
           <div
-            className="h-full bg-blue-500 transition-all"
+            className="h-full bg-blue-500 transition-all duration-1000 linear" // Smooth transition ke liye
             style={{ width: `${(timeRemaining / 5) * 100}%` }}
           />
         </div>

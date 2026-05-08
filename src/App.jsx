@@ -6,11 +6,13 @@ import {
   JokesPage,
   QuotesPage,
   UsersPage,
+  ProductsPage,
   MealsPage,
   YouTubePage,
+  AuthPage,
+  PageNotFound,
 } from "./pages";
 import { Layout } from "./components";
-import { ProductsPage } from "./pages";
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
           <Route path="/meals" element={<MealsPage />} />
           <Route path="/products" element={<ProductsPage />} />
           <Route path="/youtube" element={<YouTubePage />} />
+          <Route path="/auth/*" element={<AuthPage />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Layout>
     </BrowserRouter>

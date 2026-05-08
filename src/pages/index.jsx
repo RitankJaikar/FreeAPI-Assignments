@@ -6,3 +6,5 @@ export { default as UsersPage } from "./Users/UsersPage";
 export { default as MealsPage } from "./Meals/MealsPage";
 export { default as ProductsPage } from "./Products/ProductsPage";
 export { default as YouTubePage } from "./YouTube/YouTubePage";
+export { default as AuthPage } from "./Auth/AuthPage";
+export { default as PageNotFound } from "./PageNotFound";

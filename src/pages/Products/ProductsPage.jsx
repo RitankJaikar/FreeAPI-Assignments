@@ -9,7 +9,6 @@ import {
   PaginationTimed,
   CardArticle,
 } from "../../components";
-import { formatNumber } from "../../utils/format";
 
 function ProductsPage() {
   const { data, loading, error, handleSearch, goToNextPage } =

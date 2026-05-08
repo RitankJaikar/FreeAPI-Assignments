@@ -18,7 +18,7 @@ const assignments = [
     path: "/auth",
     icon: <ShieldCheck size={32} />,
     desc: "Login, Signup & Security",
-    disabled: true,
+    // disabled: true,
   },
   {
     id: crypto.randomUUID(),
